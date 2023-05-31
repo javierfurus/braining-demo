@@ -1,1 +1,6 @@
-<p>home-screen works!</p>
+<ng-container *ngIf="episodes$ | async as episodes">
+  <app-episode-card
+    *ngFor="let episode of episodes"
+    [episode]="episode"
+  ></app-episode-card>
+</ng-container>
