@@ -1,1 +1,12 @@
-
+<div class="d-flex flex-column">
+  <div class="d-flex justify-content-between">
+    <p>{{ episode.air_date }}</p>
+    <p>{{ episode.episode }}</p>
+  </div>
+  <div class="d-flex gap-3">
+    <img class="pickle-image" [src]="episode.character.image" />
+    <div class="d-flex flex-co">
+      <h3>{{ episode.name }}</h3>
+    </div>
+  </div>
+</div>

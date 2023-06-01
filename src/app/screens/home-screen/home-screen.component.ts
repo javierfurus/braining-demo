@@ -12,14 +12,7 @@ export class HomeScreenComponent implements OnInit {
   constructor(private readonly episodesService: EpisodesService) {}
 
   ngOnInit(): void {
-    this.getEpisodesWithFetch();
     this.getEpisodesWithHttpClient();
-  }
-
-  private getEpisodesWithFetch(): void {
-    this.episodesService.getEpisodesWithFetch().then((episodes) => {
-      console.log('withFetch', episodes);
-    });
   }
 
   private getEpisodesWithHttpClient(): void {

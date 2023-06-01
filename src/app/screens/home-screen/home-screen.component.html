@@ -1,6 +1,9 @@
 <ng-container *ngIf="episodes$ | async as episodes">
-  <app-episode-card
-    *ngFor="let episode of episodes"
-    [episode]="episode"
-  ></app-episode-card>
+  <div class="d-flex flex-column gap-3 align-items-center flex-grow-1">
+    <app-episode-card
+      class="w-100 shadow p-3"
+      *ngFor="let episode of episodes"
+      [episode]="episode"
+    ></app-episode-card>
+  </div>
 </ng-container>

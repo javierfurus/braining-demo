@@ -1,20 +1,23 @@
-<header class="d-flex gap-2">
-  <button
-    mat-raised-button
-    routerLink=""
-    routerLinkActive="mat-primary"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    Home
-  </button>
+<div class="container">
+  <header class="d-flex gap-2">
+    <button
+      mat-raised-button
+      routerLink=""
+      routerLinkActive="mat-primary"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+    </button>
 
-  <button mat-raised-button routerLink="about" routerLinkActive="mat-primary">
-    About
-  </button>
+    <button mat-raised-button routerLink="about" routerLinkActive="mat-primary">
+      About
+    </button>
 
-  <button mat-raised-button routerLink="login" routerLinkActive="mat-primary">
-    Login
-  </button>
-</header>
-
-<router-outlet></router-outlet>
+    <button mat-raised-button routerLink="login" routerLinkActive="mat-primary">
+      Login
+    </button>
+  </header>
+  <div class="d-flex flex-column">
+    <router-outlet></router-outlet>
+  </div>
+</div>

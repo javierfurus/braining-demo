@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { EpisodeWithCharacter } from 'src/app/interfaces/episode-with-character.interface';
 import { Episode } from 'src/app/interfaces/episode.interface';
 
 @Component({
@@ -8,5 +9,5 @@ import { Episode } from 'src/app/interfaces/episode.interface';
 })
 export class EpisodeCardComponent {
   @Input()
-  episode!: Episode;
+  episode!: EpisodeWithCharacter;
 }
