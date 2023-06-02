@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AboutScreenComponent } from './screens/about-screen/about-screen.component';
-import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
-import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {LoginScreenComponent} from './screens/login-screen/login-screen.component';
+import {of} from "rxjs";
+import {HomeScreenModule} from "./screens/home-screen/home-screen.module";
+import {AboutScreenModule} from "./screens/about-screen/about-screen.module";
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeScreenComponent,
+    loadChildren: () => of(HomeScreenModule)
   },
   {
     path: 'about',
-    component: AboutScreenComponent,
+    loadChildren:() => of(AboutScreenModule),
   },
   {
     path: 'login',
